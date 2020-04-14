@@ -10,6 +10,6 @@ import UIKit
 
 class MattView: UIView {
 
-
+    public lazy var view 
 
 }
