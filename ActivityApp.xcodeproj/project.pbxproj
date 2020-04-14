@@ -15,6 +15,8 @@
 		C633808224464636001F8CE0 /* TiffanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808124464636001F8CE0 /* TiffanyView.swift */; };
 		C633808424464644001F8CE0 /* CasandraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808324464644001F8CE0 /* CasandraView.swift */; };
 		C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63380852446465A001F8CE0 /* ActivityFiveView.swift */; };
+		C633808924464A04001F8CE0 /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808824464A04001F8CE0 /* ActivitiesCell.swift */; };
+		C633808B24464A63001F8CE0 /* LubaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808A24464A63001F8CE0 /* LubaCell.swift */; };
 		C64C419A2445032100919FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C41992445032100919FBC /* AppDelegate.swift */; };
 		C64C419C2445032100919FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C419B2445032100919FBC /* SceneDelegate.swift */; };
 		C64C41A32445032200919FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64C41A22445032200919FBC /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		C633808124464636001F8CE0 /* TiffanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiffanyView.swift; sourceTree = "<group>"; };
 		C633808324464644001F8CE0 /* CasandraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasandraView.swift; sourceTree = "<group>"; };
 		C63380852446465A001F8CE0 /* ActivityFiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFiveView.swift; sourceTree = "<group>"; };
+		C633808824464A04001F8CE0 /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
+		C633808A24464A63001F8CE0 /* LubaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaCell.swift; sourceTree = "<group>"; };
 		C64C41962445032100919FBC /* ActivityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64C41992445032100919FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64C419B2445032100919FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C6338087244649C3001F8CE0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C633808824464A04001F8CE0 /* ActivitiesCell.swift */,
+				C633808A24464A63001F8CE0 /* LubaCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C64C418D2445032100919FBC = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,7 @@
 				C64C419B2445032100919FBC /* SceneDelegate.swift */,
 				C6338078244645CA001F8CE0 /* Views */,
 				C6AA63872446450400F6D303 /* ViewControllers */,
+				C6338087244649C3001F8CE0 /* Cells */,
 				C64C41A22445032200919FBC /* Assets.xcassets */,
 				C64C41A42445032200919FBC /* LaunchScreen.storyboard */,
 				C64C41A72445032200919FBC /* Info.plist */,
@@ -263,6 +277,7 @@
 			files = (
 				C6AA6382244644DE00F6D303 /* LubaViewController.swift in Sources */,
 				C6AA637C2446438B00F6D303 /* ActivitiesCollectionViewController.swift in Sources */,
+				C633808924464A04001F8CE0 /* ActivitiesCell.swift in Sources */,
 				C633808024464621001F8CE0 /* LubaView.swift in Sources */,
 				C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */,
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
@@ -275,6 +290,7 @@
 				C6338077244645B2001F8CE0 /* ActivityFiveViewController.swift in Sources */,
 				C633808424464644001F8CE0 /* CasandraView.swift in Sources */,
 				C64C419C2445032100919FBC /* SceneDelegate.swift in Sources */,
+				C633808B24464A63001F8CE0 /* LubaCell.swift in Sources */,
 				C633807E24464617001F8CE0 /* MattView.swift in Sources */,
 				C633807A244645F0001F8CE0 /* ActivitiesCollectionView.swift in Sources */,
 			);
