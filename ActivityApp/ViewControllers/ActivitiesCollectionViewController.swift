@@ -10,6 +10,12 @@ import UIKit
 
 class ActivitiesCollectionViewController: UIViewController {
 
+    private let activitiesCollectionView = ActivitiesCollectionView()
+    
+    override func loadView() {
+        view = activitiesCollectionView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
