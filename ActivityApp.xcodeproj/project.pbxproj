@@ -3,27 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6338077244645B2001F8CE0 /* ActivityFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6338076244645B2001F8CE0 /* ActivityFiveViewController.swift */; };
+		C633807A244645F0001F8CE0 /* ActivitiesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6338079244645F0001F8CE0 /* ActivitiesCollectionView.swift */; };
+		C633807C244645FD001F8CE0 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633807B244645FD001F8CE0 /* RulesView.swift */; };
+		C633807E24464617001F8CE0 /* MattView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633807D24464617001F8CE0 /* MattView.swift */; };
+		C633808024464621001F8CE0 /* LubaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633807F24464621001F8CE0 /* LubaView.swift */; };
+		C633808224464636001F8CE0 /* TiffanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808124464636001F8CE0 /* TiffanyView.swift */; };
+		C633808424464644001F8CE0 /* CasandraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808324464644001F8CE0 /* CasandraView.swift */; };
+		C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63380852446465A001F8CE0 /* ActivityFiveView.swift */; };
 		C64C419A2445032100919FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C41992445032100919FBC /* AppDelegate.swift */; };
 		C64C419C2445032100919FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C419B2445032100919FBC /* SceneDelegate.swift */; };
-		C64C419E2445032100919FBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C419D2445032100919FBC /* ViewController.swift */; };
-		C64C41A12445032100919FBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64C419F2445032100919FBC /* Main.storyboard */; };
 		C64C41A32445032200919FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64C41A22445032200919FBC /* Assets.xcassets */; };
 		C64C41A62445032200919FBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64C41A42445032200919FBC /* LaunchScreen.storyboard */; };
+		C6AA637824463EA800F6D303 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AA637724463EA800F6D303 /* GoogleService-Info.plist */; };
+		C6AA637C2446438B00F6D303 /* ActivitiesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */; };
+		C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637D244643B600F6D303 /* RulesViewController.swift */; };
+		C6AA63802446443300F6D303 /* MattViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637F2446443300F6D303 /* MattViewController.swift */; };
+		C6AA6382244644DE00F6D303 /* LubaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA6381244644DE00F6D303 /* LubaViewController.swift */; };
+		C6AA6384244644EE00F6D303 /* TiffanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA6383244644EE00F6D303 /* TiffanyViewController.swift */; };
+		C6AA6386244644FA00F6D303 /* CasandraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA6385244644FA00F6D303 /* CasandraViewController.swift */; };
+		DEDE43B797F61B1700D7A823 /* Pods_ActivityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8143CA4273897C8503DDFAA9 /* Pods_ActivityApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		469565247CC26627257EA3D9 /* Pods-ActivityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityApp.debug.xcconfig"; path = "Target Support Files/Pods-ActivityApp/Pods-ActivityApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8143CA4273897C8503DDFAA9 /* Pods_ActivityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActivityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F64C1E6A7D3631F924AAF2 /* Pods-ActivityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityApp.release.xcconfig"; path = "Target Support Files/Pods-ActivityApp/Pods-ActivityApp.release.xcconfig"; sourceTree = "<group>"; };
+		C6338076244645B2001F8CE0 /* ActivityFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFiveViewController.swift; sourceTree = "<group>"; };
+		C6338079244645F0001F8CE0 /* ActivitiesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionView.swift; sourceTree = "<group>"; };
+		C633807B244645FD001F8CE0 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		C633807D24464617001F8CE0 /* MattView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MattView.swift; sourceTree = "<group>"; };
+		C633807F24464621001F8CE0 /* LubaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaView.swift; sourceTree = "<group>"; };
+		C633808124464636001F8CE0 /* TiffanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiffanyView.swift; sourceTree = "<group>"; };
+		C633808324464644001F8CE0 /* CasandraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasandraView.swift; sourceTree = "<group>"; };
+		C63380852446465A001F8CE0 /* ActivityFiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFiveView.swift; sourceTree = "<group>"; };
 		C64C41962445032100919FBC /* ActivityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64C41992445032100919FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64C419B2445032100919FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C64C419D2445032100919FBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C64C41A02445032100919FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C64C41A22445032200919FBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C64C41A52445032200919FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C64C41A72445032200919FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6AA637724463EA800F6D303 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewController.swift; sourceTree = "<group>"; };
+		C6AA637D244643B600F6D303 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		C6AA637F2446443300F6D303 /* MattViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MattViewController.swift; sourceTree = "<group>"; };
+		C6AA6381244644DE00F6D303 /* LubaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaViewController.swift; sourceTree = "<group>"; };
+		C6AA6383244644EE00F6D303 /* TiffanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiffanyViewController.swift; sourceTree = "<group>"; };
+		C6AA6385244644FA00F6D303 /* CasandraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasandraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDE43B797F61B1700D7A823 /* Pods_ActivityApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522830203FC4064BA408BD0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				469565247CC26627257EA3D9 /* Pods-ActivityApp.debug.xcconfig */,
+				81F64C1E6A7D3631F924AAF2 /* Pods-ActivityApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8DABEBBECD8A80E5CF8C9867 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8143CA4273897C8503DDFAA9 /* Pods_ActivityApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6338078244645CA001F8CE0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6338079244645F0001F8CE0 /* ActivitiesCollectionView.swift */,
+				C633807B244645FD001F8CE0 /* RulesView.swift */,
+				C633807D24464617001F8CE0 /* MattView.swift */,
+				C633807F24464621001F8CE0 /* LubaView.swift */,
+				C633808124464636001F8CE0 /* TiffanyView.swift */,
+				C633808324464644001F8CE0 /* CasandraView.swift */,
+				C63380852446465A001F8CE0 /* ActivityFiveView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C64C418D2445032100919FBC = {
 			isa = PBXGroup;
 			children = (
 				C64C41982445032100919FBC /* ActivityApp */,
 				C64C41972445032100919FBC /* Products */,
+				522830203FC4064BA408BD0B /* Pods */,
+				8DABEBBECD8A80E5CF8C9867 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +122,28 @@
 			children = (
 				C64C41992445032100919FBC /* AppDelegate.swift */,
 				C64C419B2445032100919FBC /* SceneDelegate.swift */,
-				C64C419D2445032100919FBC /* ViewController.swift */,
-				C64C419F2445032100919FBC /* Main.storyboard */,
+				C6338078244645CA001F8CE0 /* Views */,
+				C6AA63872446450400F6D303 /* ViewControllers */,
 				C64C41A22445032200919FBC /* Assets.xcassets */,
 				C64C41A42445032200919FBC /* LaunchScreen.storyboard */,
 				C64C41A72445032200919FBC /* Info.plist */,
+				C6AA637724463EA800F6D303 /* GoogleService-Info.plist */,
 			);
 			path = ActivityApp;
+			sourceTree = "<group>";
+		};
+		C6AA63872446450400F6D303 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */,
+				C6AA637D244643B600F6D303 /* RulesViewController.swift */,
+				C6AA637F2446443300F6D303 /* MattViewController.swift */,
+				C6AA6381244644DE00F6D303 /* LubaViewController.swift */,
+				C6AA6383244644EE00F6D303 /* TiffanyViewController.swift */,
+				C6AA6385244644FA00F6D303 /* CasandraViewController.swift */,
+				C6338076244645B2001F8CE0 /* ActivityFiveViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C64C41AA2445032200919FBC /* Build configuration list for PBXNativeTarget "ActivityApp" */;
 			buildPhases = (
+				BA97D03CCCC91E4C3BCAD778 /* [CP] Check Pods Manifest.lock */,
 				C64C41922445032100919FBC /* Sources */,
 				C64C41932445032100919FBC /* Frameworks */,
 				C64C41942445032100919FBC /* Resources */,
+				83D4E1339C4399E91E4B2568 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,35 +207,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				C64C41A62445032200919FBC /* LaunchScreen.storyboard in Resources */,
+				C6AA637824463EA800F6D303 /* GoogleService-Info.plist in Resources */,
 				C64C41A32445032200919FBC /* Assets.xcassets in Resources */,
-				C64C41A12445032100919FBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83D4E1339C4399E91E4B2568 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActivityApp/Pods-ActivityApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ActivityApp/Pods-ActivityApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ActivityApp/Pods-ActivityApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA97D03CCCC91E4C3BCAD778 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ActivityApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C64C41922445032100919FBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C64C419E2445032100919FBC /* ViewController.swift in Sources */,
+				C6AA6382244644DE00F6D303 /* LubaViewController.swift in Sources */,
+				C6AA637C2446438B00F6D303 /* ActivitiesCollectionViewController.swift in Sources */,
+				C633808024464621001F8CE0 /* LubaView.swift in Sources */,
+				C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */,
+				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
+				C6AA6384244644EE00F6D303 /* TiffanyViewController.swift in Sources */,
+				C633808224464636001F8CE0 /* TiffanyView.swift in Sources */,
+				C633807C244645FD001F8CE0 /* RulesView.swift in Sources */,
+				C6AA63802446443300F6D303 /* MattViewController.swift in Sources */,
+				C6AA6386244644FA00F6D303 /* CasandraViewController.swift in Sources */,
+				C6338077244645B2001F8CE0 /* ActivityFiveViewController.swift in Sources */,
+				C633808424464644001F8CE0 /* CasandraView.swift in Sources */,
 				C64C419C2445032100919FBC /* SceneDelegate.swift in Sources */,
+				C633807E24464617001F8CE0 /* MattView.swift in Sources */,
+				C633807A244645F0001F8CE0 /* ActivitiesCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C64C419F2445032100919FBC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C64C41A02445032100919FBC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C64C41A42445032200919FBC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +410,7 @@
 		};
 		C64C41AB2445032200919FBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469565247CC26627257EA3D9 /* Pods-ActivityApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +429,7 @@
 		};
 		C64C41AC2445032200919FBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F64C1E6A7D3631F924AAF2 /* Pods-ActivityApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
