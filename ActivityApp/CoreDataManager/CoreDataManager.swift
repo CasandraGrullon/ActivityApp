@@ -49,4 +49,21 @@ class CoreDataManager {
         return mediaObjects
     }
     
+    public func fetchActivityMediaObjects(activityName: String) -> [MediaObject] {
+        
+        let request = MediaObject.fetchRequest() as NSFetchRequest<MediaObject>
+        request.predicate = NSPredicate(format: activityName)
+        
+        do {
+            mediaObjects = try context.fetch(MediaObject.fetchRequest())
+        } catch {
+            print("failed to fetch media objects \(error.localizedDescription)")
+        }
+        
+        if let mediaObjects = try? context.fetch(request) {
+          self.mediaObjects = mediaObjects
+        }
+        return mediaObjects
+    }
+    
 }
