@@ -20,6 +20,7 @@
 		C63A96A52446A657007B4717 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96A42446A657007B4717 /* Activities.swift */; };
 		C63A96A92446AC64007B4717 /* URL+VideoPreviewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96A82446AC64007B4717 /* URL+VideoPreviewThumbnail.swift */; };
 		C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96AA2446AC8A007B4717 /* ShowAlert.swift */; };
+		C63A96AE2446BB16007B4717 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96AD2446BB16007B4717 /* CoreDataManager.swift */; };
 		C64C419A2445032100919FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C41992445032100919FBC /* AppDelegate.swift */; };
 		C64C419C2445032100919FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C419B2445032100919FBC /* SceneDelegate.swift */; };
 		C64C41A32445032200919FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64C41A22445032200919FBC /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		C63A96A42446A657007B4717 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		C63A96A82446AC64007B4717 /* URL+VideoPreviewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+VideoPreviewThumbnail.swift"; sourceTree = "<group>"; };
 		C63A96AA2446AC8A007B4717 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		C63A96AD2446BB16007B4717 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C64C41962445032100919FBC /* ActivityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64C41992445032100919FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64C419B2445032100919FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,12 +122,12 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		C63A96A32446A645007B4717 /* Model */ = {
+		C63A96A32446A645007B4717 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C63A96A42446A657007B4717 /* Activities.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C63A96A62446AC31007B4717 /* Extensions */ = {
@@ -135,6 +137,14 @@
 				C63A96AA2446AC8A007B4717 /* ShowAlert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C63A96AC2446BAFE007B4717 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C63A96AD2446BB16007B4717 /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
 		C64C418D2445032100919FBC = {
@@ -160,9 +170,10 @@
 			children = (
 				C64C41992445032100919FBC /* AppDelegate.swift */,
 				C64C419B2445032100919FBC /* SceneDelegate.swift */,
+				C63A96AC2446BAFE007B4717 /* CoreDataManager */,
 				C63A96A62446AC31007B4717 /* Extensions */,
 				C653A108244698B100142D86 /* FirebaseServices */,
-				C63A96A32446A645007B4717 /* Model */,
+				C63A96A32446A645007B4717 /* Models */,
 				C6338078244645CA001F8CE0 /* Views */,
 				C6AA63872446450400F6D303 /* ViewControllers */,
 				C6338087244649C3001F8CE0 /* Cells */,
@@ -319,6 +330,7 @@
 				C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */,
 				C653A107244677D300142D86 /* DatabaseService.swift in Sources */,
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
+				C63A96AE2446BB16007B4717 /* CoreDataManager.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
 				C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */,
 				C63A96A52446A657007B4717 /* Activities.swift in Sources */,

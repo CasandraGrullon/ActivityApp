@@ -47,7 +47,7 @@ class ActivitiesCollectionView: UIView {
         appNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            appNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
+            appNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80),
             appNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             appNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
         ])
