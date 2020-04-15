@@ -17,6 +17,9 @@
 		C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63380852446465A001F8CE0 /* ActivityFiveView.swift */; };
 		C633808924464A04001F8CE0 /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808824464A04001F8CE0 /* ActivitiesCell.swift */; };
 		C633808B24464A63001F8CE0 /* LubaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808A24464A63001F8CE0 /* LubaCell.swift */; };
+		C634F7F72447BAF80042BB6C /* Data+ConvertURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634F7F62447BAF80042BB6C /* Data+ConvertURL.swift */; };
+		C634F7FA2447BB330042BB6C /* MediaObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634F7F82447BB330042BB6C /* MediaObject+CoreDataProperties.swift */; };
+		C634F7FB2447BB330042BB6C /* MediaObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C634F7F92447BB330042BB6C /* MediaObject+CoreDataClass.swift */; };
 		C63A96A52446A657007B4717 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96A42446A657007B4717 /* Activities.swift */; };
 		C63A96A92446AC64007B4717 /* URL+VideoPreviewThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96A82446AC64007B4717 /* URL+VideoPreviewThumbnail.swift */; };
 		C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96AA2446AC8A007B4717 /* ShowAlert.swift */; };
@@ -51,6 +54,9 @@
 		C63380852446465A001F8CE0 /* ActivityFiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFiveView.swift; sourceTree = "<group>"; };
 		C633808824464A04001F8CE0 /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
 		C633808A24464A63001F8CE0 /* LubaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaCell.swift; sourceTree = "<group>"; };
+		C634F7F62447BAF80042BB6C /* Data+ConvertURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ConvertURL.swift"; sourceTree = "<group>"; };
+		C634F7F82447BB330042BB6C /* MediaObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MediaObject+CoreDataProperties.swift"; path = "/Users/casandragrullon/Documents/ActivityApp/ActivityApp/Models/MediaObject+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		C634F7F92447BB330042BB6C /* MediaObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MediaObject+CoreDataClass.swift"; path = "/Users/casandragrullon/Documents/ActivityApp/ActivityApp/Models/MediaObject+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		C63A96A42446A657007B4717 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		C63A96A82446AC64007B4717 /* URL+VideoPreviewThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+VideoPreviewThumbnail.swift"; sourceTree = "<group>"; };
 		C63A96AA2446AC8A007B4717 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 			children = (
 				C63A96A42446A657007B4717 /* Activities.swift */,
 				C63A96AF2446BC45007B4717 /* MediaObject.xcdatamodeld */,
+				C634F7F92447BB330042BB6C /* MediaObject+CoreDataClass.swift */,
+				C634F7F82447BB330042BB6C /* MediaObject+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				C63A96A82446AC64007B4717 /* URL+VideoPreviewThumbnail.swift */,
+				C634F7F62447BAF80042BB6C /* Data+ConvertURL.swift */,
 				C63A96AA2446AC8A007B4717 /* ShowAlert.swift */,
 			);
 			path = Extensions;
@@ -332,17 +341,20 @@
 				C633808024464621001F8CE0 /* LubaView.swift in Sources */,
 				C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */,
 				C653A107244677D300142D86 /* DatabaseService.swift in Sources */,
+				C634F7FA2447BB330042BB6C /* MediaObject+CoreDataProperties.swift in Sources */,
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
 				C63A96AE2446BB16007B4717 /* CoreDataManager.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
 				C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */,
 				C63A96A52446A657007B4717 /* Activities.swift in Sources */,
+				C634F7FB2447BB330042BB6C /* MediaObject+CoreDataClass.swift in Sources */,
 				C6AA6384244644EE00F6D303 /* TiffanyViewController.swift in Sources */,
 				C633808224464636001F8CE0 /* TiffanyView.swift in Sources */,
 				C633807C244645FD001F8CE0 /* RulesView.swift in Sources */,
 				C63A96B12446BC45007B4717 /* MediaObject.xcdatamodeld in Sources */,
 				C6AA63802446443300F6D303 /* MattViewController.swift in Sources */,
 				C6AA6386244644FA00F6D303 /* CasandraViewController.swift in Sources */,
+				C634F7F72447BAF80042BB6C /* Data+ConvertURL.swift in Sources */,
 				C6338077244645B2001F8CE0 /* ActivityFiveViewController.swift in Sources */,
 				C633808424464644001F8CE0 /* CasandraView.swift in Sources */,
 				C64C419C2445032100919FBC /* SceneDelegate.swift in Sources */,

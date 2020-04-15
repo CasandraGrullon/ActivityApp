@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/casandragrullon/Documents/ActivityApp/ActivityApp/Models/MediaObject+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
       location = "group:ActivityApp.xcodeproj">
    </FileRef>
    <FileRef
