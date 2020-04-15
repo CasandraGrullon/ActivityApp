@@ -17,11 +17,13 @@
 		C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63380852446465A001F8CE0 /* ActivityFiveView.swift */; };
 		C633808924464A04001F8CE0 /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808824464A04001F8CE0 /* ActivitiesCell.swift */; };
 		C633808B24464A63001F8CE0 /* LubaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633808A24464A63001F8CE0 /* LubaCell.swift */; };
+		C63A96A52446A657007B4717 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63A96A42446A657007B4717 /* Activities.swift */; };
 		C64C419A2445032100919FBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C41992445032100919FBC /* AppDelegate.swift */; };
 		C64C419C2445032100919FBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C419B2445032100919FBC /* SceneDelegate.swift */; };
 		C64C41A32445032200919FBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64C41A22445032200919FBC /* Assets.xcassets */; };
 		C64C41A62445032200919FBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64C41A42445032200919FBC /* LaunchScreen.storyboard */; };
 		C653A1052446587800142D86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C653A1042446587800142D86 /* GoogleService-Info.plist */; };
+		C653A107244677D300142D86 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653A106244677D300142D86 /* DatabaseService.swift */; };
 		C6AA637C2446438B00F6D303 /* ActivitiesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */; };
 		C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637D244643B600F6D303 /* RulesViewController.swift */; };
 		C6AA63802446443300F6D303 /* MattViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637F2446443300F6D303 /* MattViewController.swift */; };
@@ -45,6 +47,7 @@
 		C63380852446465A001F8CE0 /* ActivityFiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFiveView.swift; sourceTree = "<group>"; };
 		C633808824464A04001F8CE0 /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
 		C633808A24464A63001F8CE0 /* LubaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaCell.swift; sourceTree = "<group>"; };
+		C63A96A42446A657007B4717 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
 		C64C41962445032100919FBC /* ActivityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64C41992445032100919FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C64C419B2445032100919FBC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		C64C41A52445032200919FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C64C41A72445032200919FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C653A1042446587800142D86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C653A106244677D300142D86 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewController.swift; sourceTree = "<group>"; };
 		C6AA637D244643B600F6D303 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		C6AA637F2446443300F6D303 /* MattViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MattViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		C63A96A32446A645007B4717 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C63A96A42446A657007B4717 /* Activities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C64C418D2445032100919FBC = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +147,8 @@
 			children = (
 				C64C41992445032100919FBC /* AppDelegate.swift */,
 				C64C419B2445032100919FBC /* SceneDelegate.swift */,
+				C653A108244698B100142D86 /* FirebaseServices */,
+				C63A96A32446A645007B4717 /* Model */,
 				C6338078244645CA001F8CE0 /* Views */,
 				C6AA63872446450400F6D303 /* ViewControllers */,
 				C6338087244649C3001F8CE0 /* Cells */,
@@ -144,6 +158,14 @@
 				C653A1042446587800142D86 /* GoogleService-Info.plist */,
 			);
 			path = ActivityApp;
+			sourceTree = "<group>";
+		};
+		C653A108244698B100142D86 /* FirebaseServices */ = {
+			isa = PBXGroup;
+			children = (
+				C653A106244677D300142D86 /* DatabaseService.swift */,
+			);
+			path = FirebaseServices;
 			sourceTree = "<group>";
 		};
 		C6AA63872446450400F6D303 /* ViewControllers */ = {
@@ -280,8 +302,10 @@
 				C633808924464A04001F8CE0 /* ActivitiesCell.swift in Sources */,
 				C633808024464621001F8CE0 /* LubaView.swift in Sources */,
 				C63380862446465A001F8CE0 /* ActivityFiveView.swift in Sources */,
+				C653A107244677D300142D86 /* DatabaseService.swift in Sources */,
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
+				C63A96A52446A657007B4717 /* Activities.swift in Sources */,
 				C6AA6384244644EE00F6D303 /* TiffanyViewController.swift in Sources */,
 				C633808224464636001F8CE0 /* TiffanyView.swift in Sources */,
 				C633807C244645FD001F8CE0 /* RulesView.swift in Sources */,
