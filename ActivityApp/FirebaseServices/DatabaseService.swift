@@ -15,7 +15,7 @@ class DatabaseService {
     private init() {}
     public static let shared = DatabaseService()
     
-    public func getActivities(id: String,completion: @escaping (Result<[Activity], Error>) -> ()) {
+    public func getActivities(completion: @escaping (Result<[Activity], Error>) -> ()) {
         db.collection("activities").getDocuments { (snapshot, error) in
             if let error = error {
                 completion(.failure(error))

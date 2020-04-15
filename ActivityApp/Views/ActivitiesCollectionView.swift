@@ -9,9 +9,16 @@
 import UIKit
 
 class ActivitiesCollectionView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.clipsToBounds = true
+        collectionView.layer.cornerRadius = 13
+    }
     public lazy var appNameLabel: UILabel = {
        let label = UILabel()
         label.text = "Fun Activities"
+        label.font = UIFont(name: "Helvetica", size: 40)
+        label.textColor = #colorLiteral(red: 0.03921568627, green: 0.5176470588, blue: 1, alpha: 1)
         label.textAlignment = .center
         return label
     }()
@@ -19,6 +26,7 @@ class ActivitiesCollectionView: UIView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        cv.backgroundColor = .clear
         return cv
     }()
     
@@ -39,7 +47,7 @@ class ActivitiesCollectionView: UIView {
         appNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            appNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            appNameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 50),
             appNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             appNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
         ])
@@ -49,10 +57,10 @@ class ActivitiesCollectionView: UIView {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: appNameLabel.bottomAnchor, constant: 10),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            collectionView.bottomAnchor.constraint(equalTo: appNameLabel.bottomAnchor, constant: -20)
+            collectionView.topAnchor.constraint(equalTo: appNameLabel.bottomAnchor, constant: 50),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
 
