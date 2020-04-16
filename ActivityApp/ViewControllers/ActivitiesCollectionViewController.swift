@@ -83,5 +83,12 @@ extension ActivitiesCollectionViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let activity = activities[indexPath.row]
+        let rulesVC = RulesViewController()
+        rulesVC.activity = activity
+        navigationController?.pushViewController(rulesVC, animated: true)
+    }
+    
     
 }
