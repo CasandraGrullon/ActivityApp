@@ -14,7 +14,7 @@ class RulesViewController: UIViewController {
     
     override func loadView() {
         view = rulesView
-        rulesView.backgroundColor = .systemPink
+        rulesView.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
     }
     
     public var activity: Activity?
