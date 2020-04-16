@@ -31,6 +31,7 @@
 		C64C41A62445032200919FBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64C41A42445032200919FBC /* LaunchScreen.storyboard */; };
 		C653A1052446587800142D86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C653A1042446587800142D86 /* GoogleService-Info.plist */; };
 		C653A107244677D300142D86 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653A106244677D300142D86 /* DatabaseService.swift */; };
+		C6874A892448B112009616E5 /* LubaHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6874A882448B112009616E5 /* LubaHeaderView.swift */; };
 		C6AA637C2446438B00F6D303 /* ActivitiesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */; };
 		C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637D244643B600F6D303 /* RulesViewController.swift */; };
 		C6AA63802446443300F6D303 /* MattViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637F2446443300F6D303 /* MattViewController.swift */; };
@@ -70,6 +71,7 @@
 		C64C41A72445032200919FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C653A1042446587800142D86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C653A106244677D300142D86 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		C6874A882448B112009616E5 /* LubaHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaHeaderView.swift; sourceTree = "<group>"; };
 		C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewController.swift; sourceTree = "<group>"; };
 		C6AA637D244643B600F6D303 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		C6AA637F2446443300F6D303 /* MattViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MattViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				C633808124464636001F8CE0 /* TiffanyView.swift */,
 				C633808324464644001F8CE0 /* CasandraView.swift */,
 				C63380852446465A001F8CE0 /* ActivityFiveView.swift */,
+				C6874A882448B112009616E5 /* LubaHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
 				C63A96AE2446BB16007B4717 /* CoreDataManager.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
+				C6874A892448B112009616E5 /* LubaHeaderView.swift in Sources */,
 				C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */,
 				C63A96A52446A657007B4717 /* Activities.swift in Sources */,
 				C634F7FB2447BB330042BB6C /* MediaObject+CoreDataClass.swift in Sources */,
