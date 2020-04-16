@@ -42,7 +42,7 @@ class LubaViewController: UIViewController {
             super.viewDidLoad()
 
             lubaView.backgroundColor = #colorLiteral(red: 1, green: 0.7233033776, blue: 0.2232708037, alpha: 1)
-            navigationItem.title = "Name of the activity"
+            navigationItem.title = activity?.activityName
             configureCellAndHeader()
             configureCollectionView()
             configureAddButton()
@@ -50,7 +50,7 @@ class LubaViewController: UIViewController {
         }
     
     private func fetchMediaObjects() {
-        mediaObjects = CoreDataManager.shared.fetchAllMediaObject()//.filter { $0.activityName == activity?.activityName}
+        mediaObjects = CoreDataManager.shared.fetchAllMediaObject().filter { $0.activityName == activity?.activityName}
 
     }
     
@@ -123,7 +123,7 @@ class LubaViewController: UIViewController {
             guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath) as? LubaHeaderView else {
                 fatalError("could not dequeue a HeaderView")
             }
-            
+            headerView.headerLabel.text = activity?.activityRules
             return headerView
         }
     }
