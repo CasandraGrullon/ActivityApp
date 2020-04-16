@@ -2,7 +2,7 @@
 //  MediaObject+CoreDataProperties.swift
 //  ActivityApp
 //
-//  Created by casandra grullon on 4/16/20.
+//  Created by Liubov Kaper  on 4/16/20.
 //  Copyright © 2020 casandra grullon. All rights reserved.
 //
 //
@@ -17,11 +17,11 @@ extension MediaObject {
         return NSFetchRequest<MediaObject>(entityName: "MediaObject")
     }
 
+    @NSManaged public var activityName: String?
     @NSManaged public var caption: String?
     @NSManaged public var createdDate: Date?
     @NSManaged public var id: String?
     @NSManaged public var imageData: Data?
     @NSManaged public var videoData: Data?
-    @NSManaged public var activityName: String?
 
 }
