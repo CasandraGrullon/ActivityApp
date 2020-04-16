@@ -16,11 +16,16 @@ class CoreDataManager {
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    public func createMediaObject(_ imageData: Data, videoURL: URL?) -> MediaObject {
+    public func createMediaObject(_ imageData: Data, videoURL: URL?, caption: String?, activityName: String) -> MediaObject {
         let mediaObject = MediaObject(entity: MediaObject.entity(), insertInto: context)
         mediaObject.id = UUID().uuidString
         mediaObject.createdDate = Date()
         mediaObject.imageData = imageData
+        mediaObject.activityName = activityName
+        
+        if let caption = caption {
+            mediaObject.caption = caption
+        }
         
         if let videoURL = videoURL {
             do {
@@ -49,6 +54,7 @@ class CoreDataManager {
         return mediaObjects
     }
     
+    //MARK: - This function will be for grabbing saved data and filtering it based on the activity
     public func fetchActivityMediaObjects(activityName: String) -> [MediaObject] {
         
         let request = MediaObject.fetchRequest() as NSFetchRequest<MediaObject>

@@ -2,7 +2,7 @@
 //  MediaObject+CoreDataProperties.swift
 //  
 //
-//  Created by casandra grullon on 4/15/20.
+//  Created by casandra grullon on 4/16/20.
 //
 //
 
@@ -21,5 +21,6 @@ extension MediaObject {
     @NSManaged public var id: String?
     @NSManaged public var imageData: Data?
     @NSManaged public var videoData: Data?
+    @NSManaged public var activityName: String?
 
 }
