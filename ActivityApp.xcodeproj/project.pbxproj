@@ -38,6 +38,7 @@
 		C6AA6382244644DE00F6D303 /* LubaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA6381244644DE00F6D303 /* LubaViewController.swift */; };
 		C6AA6384244644EE00F6D303 /* TiffanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA6383244644EE00F6D303 /* TiffanyViewController.swift */; };
 		C6AA6386244644FA00F6D303 /* CasandraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA6385244644FA00F6D303 /* CasandraViewController.swift */; };
+		C6B20E6F244921B900DEA77B /* InterviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B20E6E244921B900DEA77B /* InterviewCell.swift */; };
 		DEDE43B797F61B1700D7A823 /* Pods_ActivityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8143CA4273897C8503DDFAA9 /* Pods_ActivityApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		C6AA6381244644DE00F6D303 /* LubaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaViewController.swift; sourceTree = "<group>"; };
 		C6AA6383244644EE00F6D303 /* TiffanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiffanyViewController.swift; sourceTree = "<group>"; };
 		C6AA6385244644FA00F6D303 /* CasandraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasandraViewController.swift; sourceTree = "<group>"; };
+		C6B20E6E244921B900DEA77B /* InterviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				C633808824464A04001F8CE0 /* ActivitiesCell.swift */,
 				C633808A24464A63001F8CE0 /* LubaCell.swift */,
+				C6B20E6E244921B900DEA77B /* InterviewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
 				C63A96AE2446BB16007B4717 /* CoreDataManager.swift in Sources */,
 				C6874A952448B454009616E5 /* MediaObject+CoreDataProperties.swift in Sources */,
+				C6B20E6F244921B900DEA77B /* InterviewCell.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
 				C6874A892448B112009616E5 /* LubaHeaderView.swift in Sources */,
 				C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */,
