@@ -30,8 +30,8 @@
 		C653A1052446587800142D86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C653A1042446587800142D86 /* GoogleService-Info.plist */; };
 		C653A107244677D300142D86 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653A106244677D300142D86 /* DatabaseService.swift */; };
 		C6874A892448B112009616E5 /* LubaHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6874A882448B112009616E5 /* LubaHeaderView.swift */; };
-		C6874A902448B1D1009616E5 /* MediaObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6874A8E2448B1D1009616E5 /* MediaObject+CoreDataClass.swift */; };
-		C6874A912448B1D1009616E5 /* MediaObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6874A8F2448B1D1009616E5 /* MediaObject+CoreDataProperties.swift */; };
+		C6874A942448B454009616E5 /* MediaObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6874A922448B454009616E5 /* MediaObject+CoreDataClass.swift */; };
+		C6874A952448B454009616E5 /* MediaObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6874A932448B454009616E5 /* MediaObject+CoreDataProperties.swift */; };
 		C6AA637C2446438B00F6D303 /* ActivitiesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */; };
 		C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637D244643B600F6D303 /* RulesViewController.swift */; };
 		C6AA63802446443300F6D303 /* MattViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA637F2446443300F6D303 /* MattViewController.swift */; };
@@ -70,8 +70,8 @@
 		C653A1042446587800142D86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C653A106244677D300142D86 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		C6874A882448B112009616E5 /* LubaHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LubaHeaderView.swift; sourceTree = "<group>"; };
-		C6874A8E2448B1D1009616E5 /* MediaObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MediaObject+CoreDataClass.swift"; path = "/Users/casandragrullon/Documents/ActivityApp/ActivityApp/Models/MediaObject+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		C6874A8F2448B1D1009616E5 /* MediaObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "MediaObject+CoreDataProperties.swift"; path = "/Users/casandragrullon/Documents/ActivityApp/ActivityApp/Models/MediaObject+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		C6874A922448B454009616E5 /* MediaObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaObject+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		C6874A932448B454009616E5 /* MediaObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaObject+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		C6AA637B2446438B00F6D303 /* ActivitiesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewController.swift; sourceTree = "<group>"; };
 		C6AA637D244643B600F6D303 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		C6AA637F2446443300F6D303 /* MattViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MattViewController.swift; sourceTree = "<group>"; };
@@ -136,10 +136,10 @@
 		C63A96A32446A645007B4717 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C6874A922448B454009616E5 /* MediaObject+CoreDataClass.swift */,
+				C6874A932448B454009616E5 /* MediaObject+CoreDataProperties.swift */,
 				C63A96A42446A657007B4717 /* Activities.swift */,
 				C63A96AF2446BC45007B4717 /* MediaObject.xcdatamodeld */,
-				C6874A8E2448B1D1009616E5 /* MediaObject+CoreDataClass.swift */,
-				C6874A8F2448B1D1009616E5 /* MediaObject+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,12 +346,12 @@
 				C653A107244677D300142D86 /* DatabaseService.swift in Sources */,
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
 				C63A96AE2446BB16007B4717 /* CoreDataManager.swift in Sources */,
-				C6874A912448B1D1009616E5 /* MediaObject+CoreDataProperties.swift in Sources */,
+				C6874A952448B454009616E5 /* MediaObject+CoreDataProperties.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
 				C6874A892448B112009616E5 /* LubaHeaderView.swift in Sources */,
 				C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */,
 				C63A96A52446A657007B4717 /* Activities.swift in Sources */,
-				C6874A902448B1D1009616E5 /* MediaObject+CoreDataClass.swift in Sources */,
+				C6874A942448B454009616E5 /* MediaObject+CoreDataClass.swift in Sources */,
 				C6AA6384244644EE00F6D303 /* TiffanyViewController.swift in Sources */,
 				C633808224464636001F8CE0 /* TiffanyView.swift in Sources */,
 				C633807C244645FD001F8CE0 /* RulesView.swift in Sources */,
