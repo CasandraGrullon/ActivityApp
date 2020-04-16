@@ -102,11 +102,11 @@ class LubaCell: UICollectionViewCell {
         ])
     }
     
-    public func configureCell(for mediaObject: LubaMediaObject) {
+    public func configureCell(for mediaObject: MediaObject) {
         if let imageData = mediaObject.imageData {
             actionImage.image = UIImage(data: imageData)
         }
-        if let videoURL = mediaObject.videoURL {
+        if let videoData = mediaObject.videoData, let videoURL = videoData.convertToURL() {
             let image = videoURL.videoPreviewThumbnail() ?? UIImage(systemName: "heart")
             actionImage.image = image
         }
@@ -114,12 +114,6 @@ class LubaCell: UICollectionViewCell {
         
     }
 
-struct LubaMediaObject: Codable {
-    let imageData: Data?
-    let videoURL: URL?
-    let caption: String? // UI so user can enter text
-    let id = UUID().uuidString
-    let createdDate = Date()
-}
+
 
 

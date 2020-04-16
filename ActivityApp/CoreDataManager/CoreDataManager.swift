@@ -54,22 +54,18 @@ class CoreDataManager {
         return mediaObjects
     }
     
-    //MARK: - This function will be for grabbing saved data and filtering it based on the activity
-    public func fetchActivityMediaObjects(activityName: String) -> [MediaObject] {
-        
-        let request = MediaObject.fetchRequest() as NSFetchRequest<MediaObject>
-        request.predicate = NSPredicate(format: activityName)
-        
+    
+    @discardableResult
+    public func deleteObject(_ object: MediaObject) -> Bool {
+        var wasDeleted = false
+        context.delete(object)
         do {
-            mediaObjects = try context.fetch(MediaObject.fetchRequest())
+            try context.save()
+            wasDeleted = true
         } catch {
-            print("failed to fetch media objects \(error.localizedDescription)")
+            print("failed to delete object with error: \(error)")
         }
-        
-        if let mediaObjects = try? context.fetch(request) {
-          self.mediaObjects = mediaObjects
-        }
-        return mediaObjects
+        return wasDeleted
     }
     
 }

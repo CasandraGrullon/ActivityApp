@@ -30,11 +30,13 @@ class LubaViewController: UIViewController {
         
         
         // here change String to Object that we will create
-        private var mediaObjects = [LubaMediaObject]() {
+        private var mediaObjects = [MediaObject]() {
             didSet{
                 lubaView.collectionView.reloadData()
             }
         }
+    
+    public var activity: Activity?
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -44,8 +46,13 @@ class LubaViewController: UIViewController {
             configureCellAndHeader()
             configureCollectionView()
             configureAddButton()
-            
+            fetchMediaObjects()
         }
+    
+    private func fetchMediaObjects() {
+        mediaObjects = CoreDataManager.shared.fetchAllMediaObject()//.filter { $0.activityName == activity?.activityName}
+
+    }
     
     private func configureCollectionView() {
         lubaView.collectionView.dataSource = self
@@ -129,7 +136,7 @@ class LubaViewController: UIViewController {
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             let mediaObject = mediaObjects[indexPath.row]
-            guard let videoURL = mediaObject.videoURL else { return}
+            guard let videoURL = mediaObject.videoData?.convertToURL() else { return}
         
         let playerViewController = AVPlayerViewController()
             let player = AVPlayer(url: videoURL)
@@ -147,13 +154,16 @@ class LubaViewController: UIViewController {
             }
             switch mediaType {
             case "public.image":
-                if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let imageData = originalImage.jpegData(compressionQuality: 1.0) {
-                    let mediaObject = LubaMediaObject(imageData: imageData, videoURL: nil, caption: nil)
+                
+                if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage, let imageData = originalImage.jpegData(compressionQuality: 1.0), let activity = activity?.activityName {
+                    //let mediaObject = MediaObject(imageData: imageData, videoURL: nil, caption: nil)
+                    let mediaObject = CoreDataManager.shared.createMediaObject(imageData, videoURL: nil, caption: nil, activityName: activity)
                     mediaObjects.append(mediaObject)
                 }
             case "public.movie":
-                if let mediaURL = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
-                    let mediaObject = LubaMediaObject(imageData: nil, videoURL: mediaURL, caption: nil)
+                if let mediaURL = info[UIImagePickerController.InfoKey.mediaURL] as? URL, let image = mediaURL.videoPreviewThumbnail(), let imageData = image.jpegData(compressionQuality: 1.0), let activity = activity?.activityName {
+                    //let mediaObject = MediaObject(imageData: nil, videoURL: mediaURL, caption: nil)
+                    let mediaObject = CoreDataManager.shared.createMediaObject(imageData, videoURL: mediaURL, caption: nil, activityName: activity)
                     mediaObjects.append(mediaObject)
                 }
             default:
