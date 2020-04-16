@@ -15,6 +15,12 @@ class MattView: UIView {
         iv.image = UIImage(named: "wantedPoster")
         return iv
     }()
+    
+    public lazy var photoImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.backgroundColor = .systemTeal
+        return iv
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -27,10 +33,11 @@ class MattView: UIView {
     }
     
     private func commonInit() {
-        setupImageView()
+        setupPosterView()
+        setupPhotoView()
     }
     
-    private func setupImageView() {
+    private func setupPosterView() {
         addSubview(wantedPoster)
         wantedPoster.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -39,6 +46,16 @@ class MattView: UIView {
             wantedPoster.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             wantedPoster.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor)
         ])
-        
+    }
+    
+    private func setupPhotoView() {
+        addSubview(photoImageView)
+        photoImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            photoImageView.centerXAnchor.constraint(equalTo: wantedPoster.centerXAnchor, constant: -7),
+            photoImageView.centerYAnchor.constraint(equalTo: wantedPoster.centerYAnchor, constant: 15),
+            photoImageView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.45),
+            photoImageView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.62)
+        ])
     }
 }
