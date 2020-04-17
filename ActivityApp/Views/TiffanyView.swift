@@ -127,6 +127,15 @@ class TiffanyView: UIView {
         return stack
     }()
     
+    public lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 100, height: 100)
+        let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        cv.backgroundColor = .systemGroupedBackground
+        return cv
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame:UIScreen.main.bounds)
         commomInit()
@@ -141,6 +150,7 @@ class TiffanyView: UIView {
         setUpImageView()
         setUpDoodleView()
         setUpStackView()
+        setUpCollectionView()
     }
     
     func setUpImageView() {
@@ -188,7 +198,7 @@ class TiffanyView: UIView {
         
         NSLayoutConstraint.activate([
         
-            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 100),
+            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             stackView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.10
@@ -196,6 +206,17 @@ class TiffanyView: UIView {
         
         
         
+        ])
+    }
+    private func setUpCollectionView() {
+        addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: stackView.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
     
