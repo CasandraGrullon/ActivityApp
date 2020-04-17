@@ -113,6 +113,12 @@ class TiffanyViewController: UIViewController {
         success = false
         return }
     UIGraphicsEndImageContext()
+    
+    //save to coreData
+    
+    
+    
+    
 
     //Save it to the camera roll
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
