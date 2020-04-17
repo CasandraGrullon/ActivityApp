@@ -42,6 +42,7 @@ class RulesViewController: UIViewController {
             navigationController?.pushViewController(storyboardVC, animated: true)
         } else if activity?.activityName == "Record Interviews" {
             let interviewVC = CasandraViewController()
+            interviewVC.activity = activity
             navigationController?.pushViewController(interviewVC, animated: true)
         } else if activity?.activityName == "Personify Something" {
             let personifyVC = TiffanyViewController()
