@@ -9,7 +9,17 @@
 import UIKit
 
 class CasandraView: UIView {
-    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        questionsLabel.clipsToBounds = true
+        questionsLabel.layer.cornerRadius = 13
+        cameraButton.clipsToBounds = true
+        cameraButton.layer.cornerRadius = 13
+        galleryButton.clipsToBounds = true
+        galleryButton.layer.cornerRadius = 13
+        collectionView.clipsToBounds = true
+        collectionView.layer.cornerRadius = 13
+    }
     public lazy var questionsLabel: UILabel = {
     let label = UILabel()
         label.textAlignment = .center
@@ -17,7 +27,7 @@ class CasandraView: UIView {
         label.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
         label.numberOfLines = 0
         label.font = UIFont(name: "Helvetica", size: 20)
-        label.text = "Interview Questions\n1. What/who is your biggest inspiration?\n2. What do you want to be when you grow up?\n3. What is your favorite color?\n4. What is the last movie you saw?"
+        label.text = "Interview Questions\n\n1. What/who is your biggest inspiration?\n2. What do you want to be when you grow up?\n3. What is your favorite color?\n4. What is the last movie you saw?\n"
         return label
         
     }()
@@ -79,7 +89,7 @@ class CasandraView: UIView {
         addSubview(buttonStack)
         buttonStack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            buttonStack.topAnchor.constraint(equalTo: questionsLabel.bottomAnchor),
+            buttonStack.topAnchor.constraint(equalTo: questionsLabel.bottomAnchor, constant: 20),
             buttonStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             buttonStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             buttonStack.heightAnchor.constraint(equalToConstant: 60)

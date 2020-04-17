@@ -15,6 +15,7 @@ class CasandraViewController: UIViewController {
     
     override func loadView() {
         view = interviewView
+        interviewView.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
     }
     
     private lazy var imagePickerController: UIImagePickerController = {
@@ -24,7 +25,9 @@ class CasandraViewController: UIViewController {
         pickerController.delegate = self
         return pickerController
     }()
+    
     public var activity: Activity?
+    
     private var mediaObjects = [MediaObject]() {
         didSet {
             interviewView.collectionView.reloadData()
@@ -35,16 +38,43 @@ class CasandraViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = activity?.activityName
         configureCollectionView()
+        configureButtons()
+        if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+            interviewView.cameraButton.isEnabled = false
+        }
+        fetchMediaObjects()
+    }
+    
+    private func fetchMediaObjects() {
+        mediaObjects = CoreDataManager.shared.fetchAllMediaObject().filter {$0.activityName == activity?.activityName}
     }
     
     private func configureCollectionView() {
         interviewView.collectionView.delegate = self
         interviewView.collectionView.dataSource = self
+        interviewView.collectionView.register(InterviewCell.self, forCellWithReuseIdentifier: "interviewCell")
+    }
+    private func configureButtons() {
+        interviewView.cameraButton.addTarget(self, action: #selector(videoButtonPressed(_:)), for: .touchUpInside)
+        interviewView.galleryButton.addTarget(self, action: #selector(photoGalleryButtonPressed(_:)), for: .touchUpInside)
+    }
+    @objc private func photoGalleryButtonPressed(_ sender: UIButton) {
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true)
+    }
+    @objc private func videoButtonPressed(_ sender: UIButton) {
+        imagePickerController.sourceType = .camera
+        present(imagePickerController, animated: true)
     }
     
 }
 extension CasandraViewController: UICollectionViewDelegateFlowLayout {
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let maxsize: CGSize = UIScreen.main.bounds.size
+        let itemWidth: CGFloat = maxsize.width
+        let itemHeight: CGFloat = maxsize.height * 0.20
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
 }
 extension CasandraViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -55,7 +85,19 @@ extension CasandraViewController: UICollectionViewDataSource {
         guard let cell = interviewView.collectionView.dequeueReusableCell(withReuseIdentifier: "interviewCell", for: indexPath) as? InterviewCell else {
             fatalError("could not cast to interview cell")
         }
+        let mediaObject = mediaObjects[indexPath.row]
+        cell.configureCell(media: mediaObject)
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let mediaObject = mediaObjects[indexPath.row]
+        guard let mediaURL = mediaObject.videoData?.convertToURL() else {return}
+        let playerVC = AVPlayerViewController()
+        let player = AVPlayer(url: mediaURL)
+        playerVC.player = player
+        present(playerVC, animated: true) {
+            player.play()
+        }
     }
     
     
