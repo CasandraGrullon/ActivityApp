@@ -30,6 +30,12 @@ class MattView: UIView {
         return button
     }()
     
+    public lazy var saveButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(systemName: "icloud.and.arrow.down"), for: .normal)
+        return button
+    }()
+    
     public lazy var themeButton: UIButton = {
         let button = UIButton()
         button.setTitle("Change Theme", for: .normal)
@@ -51,6 +57,7 @@ class MattView: UIView {
         setupPosterView()
         setupPhotoView()
         setupPhotoButton()
+        setupSaveButton()
         setupThemeButton()
     }
     
@@ -73,6 +80,7 @@ class MattView: UIView {
             photoImageView.centerYAnchor.constraint(equalTo: templateImageView.centerYAnchor, constant: 15),
             photoImageView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.45),
             photoImageView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.62)
+          
         ])
     }
     
@@ -88,6 +96,18 @@ class MattView: UIView {
         ])
     }
     
+    private func setupSaveButton() {
+        addSubview(saveButton)
+        saveButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            saveButton.topAnchor.constraint(equalTo: photoButton.bottomAnchor, constant: 8),
+            saveButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            saveButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.06),
+            saveButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.15)
+        
+        ])
+    }
+    
     private func setupThemeButton() {
         addSubview(themeButton)
         themeButton.translatesAutoresizingMaskIntoConstraints = false
@@ -97,4 +117,5 @@ class MattView: UIView {
                     
         ])
     }
+    
 }

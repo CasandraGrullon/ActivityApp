@@ -5,7 +5,6 @@
 //  Created by casandra grullon on 4/14/20.
 //  Copyright © 2020 casandra grullon. All rights reserved.
 //
-
 import UIKit
 
 enum Theme {
@@ -18,6 +17,8 @@ class MattViewController: UIViewController {
     
     let mattView = MattView()
     private var imagePickerController = UIImagePickerController()
+    private var mediaObjects = [MediaObject]()
+    public var activity: Activity?
     private var currentTheme: Theme = .paper
     
     
@@ -86,6 +87,16 @@ class MattViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true)
+    }
+    
+    @objc
+    func saveButtonPressed() {
+        if let imageData = mattView.photoImageView.image!.jpegData(compressionQuality: 1.0), let activity = activity?.activityName {
+            let mediaObject = CoreDataManager.shared.createMediaObject(imageData, videoURL: nil, caption: nil, activityName: activity)
+            mediaObjects.append(mediaObject)
+        }
+        
+        showAlert(title: "Success", message: "Photo Saved to Collection")
     }
     
     private func showImageController(isCameraSelected: Bool) {
