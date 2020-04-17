@@ -16,14 +16,19 @@ enum Theme {
 class MattViewController: UIViewController {
     
     let mattView = MattView()
+    let themeButton = UIBarButtonItem(image: UIImage(systemName: "camera"), style: .plain, target: self, action: #selector(themeButtonPressed))
+    private var imagePickerController = UIImagePickerController()
     private var currentTheme: Theme = .poster
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mattView.backgroundColor = .systemTeal
+        mattView.photoButton.addTarget(self, action: #selector(photoButtonPressed), for: .allEvents)
         mattView.themeButton.addTarget(self, action: #selector(themeButtonPressed), for: .allEvents)
         view = mattView
+        navigationController?.navigationItem.rightBarButtonItem = themeButton
+        imagePickerController.delegate = self
         
     }
     
@@ -53,5 +58,20 @@ class MattViewController: UIViewController {
         }
     }
     
-    
+    @objc
+    func photoButtonPressed () {
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true)
+    }
+}
+
+extension MattViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            showAlert(title: "Error", message: "Image was not found")
+            return
+        }
+        mattView.photoImageView.image = image
+    }
 }

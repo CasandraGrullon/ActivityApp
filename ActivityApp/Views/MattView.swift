@@ -10,7 +10,7 @@ import UIKit
 
 class MattView: UIView {
     
-    public lazy var wantedPoster: UIImageView = {
+    public lazy var templateImageView: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "wantedPoster")
         return iv
@@ -18,8 +18,23 @@ class MattView: UIView {
     
     public lazy var photoImageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = .systemTeal
+        iv.image = UIImage(systemName: "person")
+        iv.tintColor = .systemOrange
+        iv.contentMode = .scaleAspectFit
         return iv
+    }()
+    
+    public lazy var photoButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(systemName: "camera.fill"), for: .normal)
+        return button
+    }()
+    
+    public lazy var themeButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Change Theme", for: .normal)
+        button.setTitleColor(.systemBlue, for: .normal)
+        return button
     }()
 
     override init(frame: CGRect) {
@@ -35,16 +50,18 @@ class MattView: UIView {
     private func commonInit() {
         setupPosterView()
         setupPhotoView()
+        setupPhotoButton()
+        setupThemeButton()
     }
     
     private func setupPosterView() {
-        addSubview(wantedPoster)
-        wantedPoster.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(templateImageView)
+        templateImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            wantedPoster.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            wantedPoster.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            wantedPoster.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            wantedPoster.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor)
+            templateImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            templateImageView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            templateImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            templateImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor)
         ])
     }
     
@@ -52,10 +69,32 @@ class MattView: UIView {
         addSubview(photoImageView)
         photoImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            photoImageView.centerXAnchor.constraint(equalTo: wantedPoster.centerXAnchor, constant: -7),
-            photoImageView.centerYAnchor.constraint(equalTo: wantedPoster.centerYAnchor, constant: 15),
+            photoImageView.centerXAnchor.constraint(equalTo: templateImageView.centerXAnchor, constant: -7),
+            photoImageView.centerYAnchor.constraint(equalTo: templateImageView.centerYAnchor, constant: 15),
             photoImageView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.45),
             photoImageView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.62)
+        ])
+    }
+    
+    private func setupPhotoButton() {
+        addSubview(photoButton)
+        photoButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            photoButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8),
+            photoButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            photoButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.06),
+            photoButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.15)
+        
+        ])
+    }
+    
+    private func setupThemeButton() {
+        addSubview(themeButton)
+        themeButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            themeButton.centerXAnchor.constraint(equalTo: photoImageView.centerXAnchor),
+            themeButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
+                    
         ])
     }
 }
