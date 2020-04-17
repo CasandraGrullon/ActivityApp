@@ -68,7 +68,33 @@ class MattViewController: UIViewController {
     
     @objc
     func photoButtonPressed () {
-        imagePickerController.sourceType = .photoLibrary
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let libraryAction = UIAlertAction(title: "Photo Library", style: .default) { [weak self] (alertAction) in
+            self?.showImageController(isCameraSelected: false)
+        }
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] (alertAction) in
+            self?.showImageController(isCameraSelected: true)
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+        alertController.addAction(cameraAction)
+        }
+        
+        alertController.addAction(libraryAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
+    }
+    
+    private func showImageController(isCameraSelected: Bool) {
+        
+        if isCameraSelected {
+            imagePickerController.sourceType = .camera
+        } else {
+            imagePickerController.sourceType = .photoLibrary
+        }
         present(imagePickerController, animated: true)
     }
 }
