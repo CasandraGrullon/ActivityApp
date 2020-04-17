@@ -36,7 +36,7 @@ class CasandraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = activity?.activityName
+        
         configureCollectionView()
         configureButtons()
         if !UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -50,6 +50,7 @@ class CasandraViewController: UIViewController {
     }
     
     private func configureCollectionView() {
+        navigationItem.title = activity?.activityName
         interviewView.collectionView.delegate = self
         interviewView.collectionView.dataSource = self
         interviewView.collectionView.register(InterviewCell.self, forCellWithReuseIdentifier: "interviewCell")
