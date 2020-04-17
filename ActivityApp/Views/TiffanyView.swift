@@ -17,7 +17,7 @@ class DoodleView: UIView {
         
         guard let context = UIGraphicsGetCurrentContext() else { return
         }
-        context.setStrokeColor(UIColor.black.cgColor)
+        context.setStrokeColor(UIColor.red.cgColor)
         context.setLineWidth(5)
         context.setLineCap(.round)
         
