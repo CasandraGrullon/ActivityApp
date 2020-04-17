@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8DB322C72448EAA200BA53E1 /* MediaObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB322C52448EAA200BA53E1 /* MediaObject+CoreDataClass.swift */; };
 		8DB322C82448EAA200BA53E1 /* MediaObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB322C62448EAA200BA53E1 /* MediaObject+CoreDataProperties.swift */; };
+		C615D990244940F200A392BA /* InterviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C615D98F244940F200A392BA /* InterviewCell.swift */; };
 		C6338077244645B2001F8CE0 /* ActivityFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6338076244645B2001F8CE0 /* ActivityFiveViewController.swift */; };
 		C633807A244645F0001F8CE0 /* ActivitiesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6338079244645F0001F8CE0 /* ActivitiesCollectionView.swift */; };
 		C633807C244645FD001F8CE0 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C633807B244645FD001F8CE0 /* RulesView.swift */; };
@@ -47,6 +48,7 @@
 		81F64C1E6A7D3631F924AAF2 /* Pods-ActivityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityApp.release.xcconfig"; path = "Target Support Files/Pods-ActivityApp/Pods-ActivityApp.release.xcconfig"; sourceTree = "<group>"; };
 		8DB322C52448EAA200BA53E1 /* MediaObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaObject+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8DB322C62448EAA200BA53E1 /* MediaObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C615D98F244940F200A392BA /* InterviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewCell.swift; sourceTree = "<group>"; };
 		C6338076244645B2001F8CE0 /* ActivityFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFiveViewController.swift; sourceTree = "<group>"; };
 		C6338079244645F0001F8CE0 /* ActivitiesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionView.swift; sourceTree = "<group>"; };
 		C633807B244645FD001F8CE0 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				C633808824464A04001F8CE0 /* ActivitiesCell.swift */,
 				C633808A24464A63001F8CE0 /* LubaCell.swift */,
+				C615D98F244940F200A392BA /* InterviewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				C6AA637E244643B600F6D303 /* RulesViewController.swift in Sources */,
 				C63A96AE2446BB16007B4717 /* CoreDataManager.swift in Sources */,
 				8DB322C82448EAA200BA53E1 /* MediaObject+CoreDataProperties.swift in Sources */,
+				C615D990244940F200A392BA /* InterviewCell.swift in Sources */,
 				C64C419A2445032100919FBC /* AppDelegate.swift in Sources */,
 				C6874A892448B112009616E5 /* LubaHeaderView.swift in Sources */,
 				C63A96AB2446AC8A007B4717 /* ShowAlert.swift in Sources */,

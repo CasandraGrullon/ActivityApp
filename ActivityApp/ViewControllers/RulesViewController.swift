@@ -14,7 +14,7 @@ class RulesViewController: UIViewController {
     
     override func loadView() {
         view = rulesView
-        rulesView.backgroundColor = .systemPink
+        rulesView.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
     }
     
     public var activity: Activity?
@@ -42,6 +42,7 @@ class RulesViewController: UIViewController {
             navigationController?.pushViewController(storyboardVC, animated: true)
         } else if activity?.activityName == "Record Interviews" {
             let interviewVC = CasandraViewController()
+            interviewVC.activity = activity
             navigationController?.pushViewController(interviewVC, animated: true)
         } else if activity?.activityName == "Personify Something" {
             let personifyVC = TiffanyViewController()
