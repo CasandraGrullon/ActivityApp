@@ -46,6 +46,7 @@ class RulesViewController: UIViewController {
             navigationController?.pushViewController(interviewVC, animated: true)
         } else if activity?.activityName == "Personify Something" {
             let personifyVC = TiffanyViewController()
+            personifyVC.activity = activity
             navigationController?.pushViewController(personifyVC, animated: true)
         }
     }
