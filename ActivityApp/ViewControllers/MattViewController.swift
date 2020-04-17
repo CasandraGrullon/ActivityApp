@@ -9,25 +9,24 @@
 import UIKit
 
 enum Theme {
-    case poster
     case paper
+    case poster
+    case hollywood
 }
 
 class MattViewController: UIViewController {
     
     let mattView = MattView()
-    let themeButton = UIBarButtonItem(image: UIImage(systemName: "camera"), style: .plain, target: self, action: #selector(themeButtonPressed))
     private var imagePickerController = UIImagePickerController()
-    private var currentTheme: Theme = .poster
+    private var currentTheme: Theme = .paper
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mattView.backgroundColor = .systemTeal
-        mattView.photoButton.addTarget(self, action: #selector(photoButtonPressed), for: .allEvents)
-        mattView.themeButton.addTarget(self, action: #selector(themeButtonPressed), for: .allEvents)
+        mattView.photoButton.addTarget(self, action: #selector(photoButtonPressed), for: .touchUpInside)
+        mattView.themeButton.addTarget(self, action: #selector(themeButtonPressed), for: .touchUpInside)
         view = mattView
-        navigationController?.navigationItem.rightBarButtonItem = themeButton
         imagePickerController.delegate = self
         
     }
@@ -44,17 +43,26 @@ class MattViewController: UIViewController {
     @objc
     func themeButtonPressed () {
         switch currentTheme {
+            
+            
+        case .paper:
+            UIView.transition(with: mattView, duration: 1, options: [.transitionFlipFromRight], animations: {
+                self.mattView.templateImageView.image = UIImage(named: "wantedPoster")
+            }, completion: nil)
+            currentTheme = .poster
+            
         case .poster:
-            UIView.transition(with: mattView, duration: 2, options: [.transitionCrossDissolve], animations: {
+            UIView.transition(with: mattView, duration: 1, options: [.transitionCurlUp], animations: {
+                self.mattView.templateImageView.image = UIImage(named: "hollywood")
+            }, completion: nil)
+            currentTheme = .hollywood
+            
+        case .hollywood:
+            UIView.transition(with: mattView, duration: 1, options: [.transitionCrossDissolve], animations: {
                 self.mattView.templateImageView.image = UIImage(named: "agingPaper")
             }, completion: nil)
             currentTheme = .paper
             
-        case .paper:
-            UIView.transition(with: mattView, duration: 2, options: [.transitionCrossDissolve], animations: {
-                self.mattView.templateImageView.image = UIImage(named: "wantedPoster")
-            }, completion: nil)
-            currentTheme = .poster
         }
     }
     
@@ -72,6 +80,8 @@ extension MattViewController: UINavigationControllerDelegate, UIImagePickerContr
             showAlert(title: "Error", message: "Image was not found")
             return
         }
-        mattView.photoImageView.image = image
+        let ciimage = sepiaFilter(image: image, value: 1.0)
+        mattView.photoImageView.image = UIImage(ciImage: ciimage!)
+        dismiss(animated: true)
     }
 }
