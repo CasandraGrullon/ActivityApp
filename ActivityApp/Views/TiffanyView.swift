@@ -20,9 +20,9 @@ class DoodleView: UIView {
         
         guard let context = UIGraphicsGetCurrentContext() else { return
         }
-        context.setStrokeColor(UIColor.red.cgColor)
-        context.setLineWidth(10)
-        context.setLineCap(.butt)
+        context.setStrokeColor(UIColor.black.cgColor)
+        context.setLineWidth(5)
+        context.setLineCap(.round)
         
         lines.forEach { (line) in
             for (i, p) in line.enumerated() {
@@ -36,7 +36,7 @@ class DoodleView: UIView {
         }
         
         context.strokePath()
-        
+            
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -53,6 +53,12 @@ class DoodleView: UIView {
         
         setNeedsDisplay()
     }
+    
+    func clearStrokes(){
+          lines.removeAll()
+        setNeedsDisplay()
+      }
+
 }
 
 class TiffanyView: UIView {
@@ -70,43 +76,55 @@ class TiffanyView: UIView {
            return imageView
        }()
     
-    private lazy var videoButton: UIButton = {
+   public lazy var cameraButton: UIButton = {
         let button = UIButton()
         button.tag = 0
 //        button.backgroundColor = .systemBackground
         button.setBackgroundImage(UIImage(systemName: "video.fill"), for: .normal)
-        
+    button.tintColor = .cyan
         return button
     }()
-    private lazy var cameraButton: UIButton = {
+    public lazy var libraryButton: UIButton = {
         let button = UIButton()
         button.tag = 1
 //        button.backgroundColor = .systemBackground
         button.setBackgroundImage(UIImage(systemName: "photo.fill"), for: .normal)
+        
         return button
     }()
-    private lazy var randomPhotoButton: UIButton = {
+    public lazy var randomPhotoButton: UIButton = {
         let button = UIButton()
         button.tag = 2
 //        button.backgroundColor = .systemBackground
         button.setBackgroundImage(UIImage(systemName: "questionmark.circle"), for: .normal)
+        button.tintColor = .green
         return button
     }()
-    private lazy var saveButton: UIButton = {
+    public lazy var saveButton: UIButton = {
         let button = UIButton()
         button.tag = 3
 //        button.backgroundColor = .systemBackground
         button.setBackgroundImage(UIImage(systemName: "square.and.arrow.down.on.square"), for: .normal)
+        button.tintColor = .orange
         return button
     }()
+    
+    public lazy var clearButton: UIButton = {
+            let button = UIButton()
+            button.tag = 4
+    //        button.backgroundColor = .systemBackground
+            button.setBackgroundImage(UIImage(systemName: "multiply"), for: .normal)
+        button.tintColor = .magenta
+            return button
+        }()
     
     private lazy var stackView : UIStackView = {
        let stack = UIStackView()
         stack.alignment = .fill
         stack.distribution = .fillEqually
         stack.axis = .horizontal
-        stack.spacing = 5
-        stack.backgroundColor = .yellow
+        stack.spacing = 2
+        
         return stack
     }()
     
@@ -161,19 +179,21 @@ class TiffanyView: UIView {
     
     func setUpStackView(){
         addSubview(stackView)
-        stackView.addArrangedSubview(videoButton)
         stackView.addArrangedSubview(cameraButton)
+        stackView.addArrangedSubview(libraryButton)
         stackView.addArrangedSubview(randomPhotoButton)
         stackView.addArrangedSubview(saveButton)
+        stackView.addArrangedSubview(clearButton)
         
         stackView.translatesAutoresizingMaskIntoConstraints =  false
         
         NSLayoutConstraint.activate([
         
-            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 80),
+            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 100),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            stackView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.10)
+            stackView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.10
+            )
         
         
         
