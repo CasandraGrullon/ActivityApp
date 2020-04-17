@@ -101,7 +101,9 @@ class CasandraView: UIView {
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: buttonStack.bottomAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor)
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     

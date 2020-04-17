@@ -15,7 +15,7 @@ class CasandraViewController: UIViewController {
     
     override func loadView() {
         view = interviewView
-        interviewView.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+        interviewView.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
     }
     
     private lazy var imagePickerController: UIImagePickerController = {
