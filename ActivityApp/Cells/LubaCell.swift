@@ -14,6 +14,14 @@ protocol LubaCellDelegate: AnyObject {
 
 class LubaCell: UICollectionViewCell {
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        actionImage.clipsToBounds = true
+        actionImage.layer.cornerRadius = 13
+        stepsLabel.clipsToBounds = true
+        stepsLabel.layer.cornerRadius = 13
+    }
+    
     weak var delegate: LubaCellDelegate?
     
     private lazy var longPressGesture: UILongPressGestureRecognizer = {
@@ -41,10 +49,11 @@ class LubaCell: UICollectionViewCell {
         
         public lazy var stepsLabel: UILabel = {
                let label = UILabel()
-               label.backgroundColor = .cyan
+               label.backgroundColor = #colorLiteral(red: 0.929641068, green: 0.8683214784, blue: 0, alpha: 0.7392176798)
+            label.textColor = .systemBlue
                label.text = "Step 1"
                label.numberOfLines = 0
-              // label.textAlignment = .left
+               label.textAlignment = .center
                label.font = UIFont.preferredFont(forTextStyle: .headline)
                return label
            }()

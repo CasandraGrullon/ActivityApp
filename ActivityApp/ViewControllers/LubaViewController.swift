@@ -42,6 +42,7 @@ class LubaViewController: UIViewController {
             super.viewDidLoad()
 
             lubaView.backgroundColor = #colorLiteral(red: 1, green: 0.7233033776, blue: 0.2232708037, alpha: 1)
+            lubaView.collectionView.backgroundColor = #colorLiteral(red: 0.9446471334, green: 0.4903553724, blue: 0.4367896914, alpha: 0.8885380993)
             navigationItem.title = activity?.activityName
             configureCellAndHeader()
             configureCollectionView()
@@ -110,6 +111,8 @@ class LubaViewController: UIViewController {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "lubaCell", for: indexPath) as? LubaCell else {
                 fatalError("could not downcast to LubaCell")
             }
+            cell.clipsToBounds = true
+            cell.layer.cornerRadius = 13
             cell.delegate = self
             let object = mediaObjects[indexPath.row]
             cell.configureCell(for: object)
@@ -194,7 +197,9 @@ extension LubaViewController: LubaCellDelegate {
     }
     private func deleteObject(indxPath: IndexPath) {
         //do {
+        let object = mediaObjects[indxPath.row]
              mediaObjects.remove(at: indxPath.row)
+        CoreDataManager.shared.deleteObject(object)
            // lubaView.collectionView.deleteItems(at: [indxPath])
        // } catch {
           //  print("error deleting object: \(error)")
