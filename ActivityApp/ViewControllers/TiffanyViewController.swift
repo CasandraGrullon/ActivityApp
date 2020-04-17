@@ -17,26 +17,40 @@ class TiffanyViewController: UIViewController {
         }
     }
     
+    
     private lazy var imagePickerController: UIImagePickerController = {
+        let mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)
+        
         let picker = UIImagePickerController()
+        
+        picker.mediaTypes = mediaTypes ?? ["kUTTypeImage"]
         picker.delegate = self
         
         return picker
         
     }()
     
+    private var mediaObjects = [MediaObject]() {
+        didSet{
+            doodleView.collectionView.reloadData()
+        }
+    }
+    
     public var activity: Activity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view = doodleView
-        doodleView.imageView.image = UIImage(named: "newgrid")
+        doodleView.imageView.image = UIImage(named: "basket")
         view.backgroundColor = .black
+        doodleView.collectionView.register(InterviewCell.self, forCellWithReuseIdentifier: "interviewCell")
         cameraButtonPressed()
         photoLibraryButtonPressed()
         takeScreenShotOfView()
         getRandomImageButtonPressed()
         clearDoodleView()
+        setUpCollectionView()
+        fetchSavedScreenshots()
     }
     
     private func cameraButtonPressed(){
@@ -56,6 +70,14 @@ class TiffanyViewController: UIViewController {
     }
     private func clearDoodleView(){
         doodleView.clearButton.addTarget(self, action: #selector(clearScreen), for: .touchUpInside)
+    }
+    private func setUpCollectionView(){
+    doodleView.collectionView.dataSource = self
+        doodleView.collectionView.delegate = self
+    
+    }
+    private func fetchSavedScreenshots(){
+        mediaObjects = CoreDataManager.shared.fetchAllMediaObject().filter{$0.activityName == activity?.activityName}
     }
     
    @objc private func showCameraOption(){
@@ -116,8 +138,9 @@ class TiffanyViewController: UIViewController {
     
     //save to coreData
     
+    guard let imageData = image.jpegData(compressionQuality: 1.0) else {return}
     
-    
+    saveScreenShotToCoreData(with: imageData)
     
 
     //Save it to the camera roll
@@ -138,8 +161,16 @@ class TiffanyViewController: UIViewController {
         
     }
     
+    private func saveScreenShotToCoreData(with imageData: Data){
+        
+        if let activityName = activity?.activityName {
+            let mediaObject = CoreDataManager.shared.createMediaObject(imageData, videoURL: nil, caption: nil, activityName: activityName)
+            
+            mediaObjects.append(mediaObject)
+        }
+    
+    }
 }
-
 extension TiffanyViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {return}
@@ -161,4 +192,25 @@ extension UIViewController {
         present(alertController, animated: true)
     }
 
+}
+
+extension TiffanyViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        mediaObjects.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "interviewCell", for: indexPath) as? InterviewCell else {
+            fatalError("could not downcast to InterviewCell")
+        }
+        let image = mediaObjects[indexPath.row]
+        cell.configureCell(media: image)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       
+        return CGSize(width: 100, height: 100)
+    }
+    
 }
