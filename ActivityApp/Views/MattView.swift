@@ -12,7 +12,7 @@ class MattView: UIView {
     
     public lazy var templateImageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "wantedPoster")
+        iv.image = UIImage(named: "agingPaper")
         return iv
     }()
     
