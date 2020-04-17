@@ -11,6 +11,12 @@ import UIKit
 
 
 class LubaView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        collectionView.clipsToBounds = true
+        collectionView.layer.cornerRadius = 13
+        
+    }
 
    public lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

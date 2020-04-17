@@ -9,10 +9,17 @@
 import UIKit
 
 class LubaHeaderView: UICollectionReusableView {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        headerLabel.clipsToBounds = true
+        headerLabel.layer.cornerRadius = 13
+    }
         
         public lazy var headerLabel: UILabel = {
             let label = UILabel()
-            label.backgroundColor = .cyan
+            label.backgroundColor = #colorLiteral(red: 0, green: 0.5091376901, blue: 0.4806880355, alpha: 1)
+            label.textColor = .systemOrange
             label.text = "Directions"
             label.numberOfLines = 0
             label.textAlignment = .center
