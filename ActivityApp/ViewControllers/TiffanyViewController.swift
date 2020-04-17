@@ -10,21 +10,28 @@ import UIKit
 
 class TiffanyViewController: UIViewController {
 
+    let doodleView = TiffanyView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view = doodleView
+        doodleView.imageView.image = UIImage(named: "newgrid")
+        view.backgroundColor = .black
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
+    
+    func getScreetschot(){
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, true, 0)
+    guard let context = UIGraphicsGetCurrentContext() else { return }
+    view.layer.render(in: context)
+    guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
+    UIGraphicsEndImageContext()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //Save it to the camera roll
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
 
+}
 }
