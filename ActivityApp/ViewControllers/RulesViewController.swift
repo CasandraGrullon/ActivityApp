@@ -35,6 +35,7 @@ class RulesViewController: UIViewController {
     @objc private func playButtonPressed(_ sender: UIButton) {
         if activity?.activityName == "Go Back In Time" {
             let timeVC = MattViewController()
+            timeVC.activity = activity
             navigationController?.pushViewController(timeVC, animated: true)
         } else if activity?.activityName == "Storyboard Your Day" {
             let storyboardVC = LubaViewController()
