@@ -30,6 +30,12 @@ class MattView: UIView {
         return button
     }()
     
+    public lazy var saveButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(systemName: "gear"), for: .normal)
+        return button
+    }()
+    
     public lazy var themeButton: UIButton = {
         let button = UIButton()
         button.setTitle("Change Theme", for: .normal)
